@@ -1,0 +1,42 @@
+/*films.css*/
+.film
+{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 0% 1% 1% 1%;
+    width: 23%;
+    border: solid #26477C 2px;
+}
+
+.film:hover { border: solid #DC0505 2px; }
+
+.film p, .film h4
+{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.film img
+{
+    height: 85%; /*Om de text eronder te laten passen*/
+    width: 100%;
+}
+
+
+/*Verdeeld films over het scherm, styling voor een losse film in films.css*/
+.filmContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 85%;
+    width: 70%;
+    margin: 1% 1% 1% 0%;
+}
+
+@media screen and (max-width: 840px) { .film { width: 30%;}} /*3 films per regel*/
+@media screen and (max-width: 650px) { .film { width: 48%;}} /*2 films per regel*/
+@media screen and (max-width: 480px) { .film {  width: 100%;  } } /*phone mode, 1 film per regel*/

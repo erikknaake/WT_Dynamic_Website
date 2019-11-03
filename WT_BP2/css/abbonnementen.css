@@ -1,0 +1,45 @@
+
+article table input, article table option, article table select
+{
+    width: 100%;
+    background-color: #26477C;
+    border: solid black 1px;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+article { display: flex; flex-direction: column;}
+
+article table
+{
+    margin: 2%;
+    width: 100%;
+}
+
+article tr { background-color: #DC0505;}
+
+article table, article td, article th, article td
+{
+    border-collapse: collapse;
+    border: solid black 1px;
+    padding: 2px;
+}
+
+@media screen and (max-width: 480px) /*phone mode*/ {
+    article, article table { width: 95%;}
+    article { margin: 2.5% 2.5% 2.5% 10%;}
+    /*Draai eerste tabel om*/
+    article > table tr:first-child th { background-color: #DC0505;}
+    article > table tr:first-child { background-color: #192230; border: none;}
+    article > table { min-height: 200px; border: none;}
+    article > table tbody { display: flex; flex-direction: row; flex-wrap: wrap; min-height: 200px;}
+    article > table tr { display: flex; flex-direction: column; width: 25%; }
+    article > table td, article > table th { height: 100%; }
+    article > table th { font-size: 0.8em; }
+}

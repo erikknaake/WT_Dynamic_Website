@@ -1,0 +1,37 @@
+/*index.css*/
+main
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+aside {  width: 25%;  }
+
+aside p
+{
+    background-color: #DC0505;
+    padding: 2px;
+    border: solid black 1px;
+    margin-top: 4%;
+    box-shadow: 0 13px 20px rgba(0, 0, 0, 0.6);
+}
+
+article
+{
+    text-align: center;
+    width: 100%; /*Nodig voor IE*/
+}
+
+/*Breedte en hoogte van filmcontainer uit films.css overschrijven*/
+article div[class="filmContainer"]
+{
+    height: 90%;
+    width: 100%;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 480px) /*phone mode*/ {
+    aside { width: 100%;}
+
+}

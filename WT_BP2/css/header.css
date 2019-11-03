@@ -1,0 +1,202 @@
+/*header.css*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    color: white;
+    font-family: Arial sans-serif;
+}
+
+ul {  list-style-position: inside;  }
+
+html {min-width: 310px; background-color: #192230; height: 100%;}
+
+main
+{
+    width: 100%;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+}
+form { padding: 2px;}
+
+header
+{
+    background-color: #DC0505;
+    display: flex;
+    min-height: 110px;
+    box-shadow: 0 13px 20px rgba(0, 0, 0, 0.7);
+}
+
+header > a img { height: 100%; width: 100%;}
+header div form { height: 100%;}
+header nav
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header a, header nav .dropdownBox, header div form
+{
+    text-decoration: none;
+    color: white;
+    border: solid black 1px;
+}
+
+
+.centered { display: flex; justify-content: center; align-items: center;}
+.column { display: flex; flex-direction: column;}
+header nav a, header nav .dropdownBox
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a:hover {  color: #26477C;  }
+
+header div { width: 25%; }
+header table {
+    width: 100%;
+    color: white;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.red { background-color: #DC0505;}
+.error
+{
+    color: black;
+    font-size: 1.1em;
+    font-style: italic;
+    text-decoration: underline;
+}
+.fullheight { height: 100%;}
+.hidden {  visibility: hidden;}
+
+.onHoverRed:hover { background-color: #DC0505 !important;}
+.onHoverBlue:hover { background-color: #26477C !important;}
+
+header table a {
+    border: none;
+    text-decoration: solid underline;
+}
+
+header table input
+{
+    background-color: #26477C;
+    border: solid black 1px;
+    width: 100%; /*consequente breedte*/
+}
+
+header nav .dropdownBox a:hover
+{
+    color: white;
+    background-color: #26477C;
+}
+
+.dropdownBox
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdownContent
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.dropdownBox:hover .dropdownContent {  display: flex;  position: relative; top: 100%; box-shadow: 0 13px 20px rgba(0, 0, 0, 0.7);}
+.dropdownBox:hover .dropdownContent { text-decoration: none !important;}
+.dropdownBox:hover .dropdownTitle { position: absolute; }
+
+.selected {  background-color: #26477C;  }
+
+.selected:hover {  color: white;  }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 1.2em;
+}
+
+
+.slider_left {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #26477C;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    float: left;
+}
+
+.slider_left:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider_left {
+    background-color: #26477C;
+}
+
+input:checked + .slider_left:before {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.slider_right{
+    float: right;
+}
+
+.slider_left span { display: flex; justify-content: center; align-items: center; }
+
+@media screen and (max-width: 1000px)
+{
+    header { font-size: 0.8em; }
+    header form table   { font-size: 0.8em; }
+    header form table input { width: 90%; font-size: 0.8em;}
+}
+
+@media screen and (max-width: 480px) /*phone mode*/
+{
+    header
+    {
+        position: fixed;
+        flex-direction: column;
+        width: 25%;
+        height: 100%;
+    }
+    header > a { height: 20%;}
+    header nav { flex-direction: column; height: 100%;}
+    header nav .dropdownBox { flex-direction: row; }
+    header nav .dropdownBox:hover .dropdownContent {left: 100%; top: 0%;}
+    header nav a, header nav div, header div, header nav .dropdownBox { height: 25%; width: 100%;}
+
+    header a img { height: 100%; width: 100%;}
+
+    header div form table { width: 100% !important; }
+    header div form table tr{ display: flex; flex-wrap: wrap;}
+
+    main { width: 70%; float: right; display: flex; flex-direction: column;}
+}
+

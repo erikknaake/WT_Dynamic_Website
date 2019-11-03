@@ -1,0 +1,79 @@
+/*filmoverzicht.css*/
+/*Styling van de filters*/
+
+.checkbox {  display: flex;}
+
+aside label {
+    display: block;
+    overflow: hidden;
+    width: 60%;
+}
+
+/*Zwarte text op witte achtergronden */
+aside select, aside option, aside input {  color: black;  }
+
+aside input {  width: 100%;  }
+
+aside input[type="range"] { color: white;}
+
+aside select { width: 53%;}
+
+aside table, aside td, aside tr
+{
+    border-collapse: collapse;
+    padding: 2px;
+}
+
+aside tr:first-child { width: 50%;}
+
+.left {  text-align: left; }
+.right { text-align: right}
+
+aside
+{
+    float: left;
+    margin: 1% 0% 0% 1%;
+    width: 25%;
+    border: solid black 1px;
+    position: fixed;
+    box-shadow: 0 13px 20px rgba(0, 0, 0, 0.6);
+    background-color: #DC0505;
+    /*TODO: van class switch uiterlijk naar switch maken*/
+}
+
+article { display: flex; flex-direction: column; width: 70%;}
+article, .filmContainer {  float: right;  }
+.filmContainer { width: 100%; }
+article div { margin-top: 1%;}
+.section
+{
+    clear: both;
+    height: 10%;
+    margin-left: 30%;
+    width:68%;
+}
+
+.section form input[type="submit"]
+{
+    width: 100%;
+    padding: 2px;
+    background-color: #DC0505;
+    border-radius: 6px;
+    border: solid black 1px;
+    box-shadow: 0 13px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section form input[type="submit"]:hover { color: #26477C; }
+
+.film { box-shadow: 0 13px 20px rgba(0, 0, 0, 0.6);}
+
+@media screen and (max-width: 480px) /*phone mode*/ {
+    main article { width: 95%;}
+    .section { margin-left: 0; }
+
+    main aside { position: static; width: 95%;}
+    main aside table td { word-break: keep-all; }
+    main aside table label {  width: 100%;}
+    main aside tr { width: 100%;}
+}
+

@@ -1,0 +1,60 @@
+/*Details.css*/
+#description
+{
+    border: solid #26477C 2px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    margin-top: 2%;
+}
+
+#description:hover { border: solid #DC0505 2px; }
+
+#description:hover p { border-top: solid #DC0505 2px;}
+
+#description img {  height: 85%; width: 100%; }
+
+#description p, #description h4
+{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid #26477C 2px;
+    height: 100%;
+}
+
+main > div
+{
+    display: flex;
+    justify-content: space-around;
+    height: 95%;
+}
+
+main { margin-top: 1%; }
+
+main h1 { text-align: center; width: 100%}
+
+section {
+    margin-top: 2%;
+    border: solid black 1px;
+    background-color: #DC0505;
+    height: 100%;
+    width: 30%;
+    padding: 1%;
+    box-shadow: 0 13px 20px rgba(0, 0, 0, 0.6);
+}
+
+section div { margin-top: 1%;}
+
+main div form select, main div form option { color: black;}
+article { display: flex; flex-direction: column; width: 20%; height: 100%; box-shadow: 0 13px 20px rgba(0, 0, 0, 0.6);}
+article div { border: solid #26477C 2px; border-top: none;}
+article:hover div {border: solid #DC0505 2px; border-top: none;}
+article form select, article form option, article form input { color: black; padding: 2px;}
+
+@media screen and (max-width: 480px) /*phone mode*/ {
+    main > div { display: flex; flex-direction: column; width: 95%;}
+    main div article, main div section { width: 100%;}
+}
